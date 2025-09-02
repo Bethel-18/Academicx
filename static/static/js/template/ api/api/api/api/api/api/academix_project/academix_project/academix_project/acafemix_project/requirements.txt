@@ -5,3 +5,13 @@ django-cors-headers
 python-dotenv
 requests
 boto3
+Django>=4.2,<5
+djangorestframework
+djangorestframework-simplejwt
+django-cors-headers
+python-dotenv
+requests
+boto3
+pymysql
+gunicorn
+whitenoise
