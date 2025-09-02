@@ -80,3 +80,13 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOW_ALL_ORIGINS = True
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'    # add this
+STATICFILES_DIRS = [BASE_DIR / 'static']  # if not already present
+MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',   # << add this
+    # ... rest unchanged
+# near bottom
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
